@@ -1,0 +1,8 @@
+.Timer button {
+    background-color: transparent;
+    border: none;
+}
+
+.Timer p {
+    margin: 0 15px;
+}

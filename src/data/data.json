@@ -1,0 +1,146 @@
+[
+    {
+        "id": "brutus",
+        "name": "Brutus",
+        "png": "image/icons8-brutus-240.png", 
+        "svg": "image/icons8-brutus.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "fortnite-llama",
+        "name": "Fortnite Llama",
+        "png": "image/icons8-fortnite-llama-240.png", 
+        "svg": "image/icons8-fortnite-llama.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "fursona",
+        "name": "Fursona",
+        "png": "image/icons8-fursona-240.png", 
+        "svg": "image/icons8-fursona.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "genie",
+        "name": "Genie",
+        "png": "image/icons8-genie-240.png", 
+        "svg": "image/icons8-genie.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "harley-quinn",
+        "name": "Harley Quinn",
+        "png": "image/icons8-harley-quinn-dc-240.png", 
+        "svg": "image/icons8-harley-quinn-dc.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "ice-king",
+        "name": "Ice King",
+        "png": "image/icons8-ice-king-240.png", 
+        "svg": "image/icons8-ice-king.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "joker-dc",
+        "name": "Joker DC",
+        "png": "image/icons8-joker-dc-240.png", 
+        "svg": "image/icons8-joker-dc.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "madagaskar",
+        "name": "Madagaskar",
+        "png": "image/icons8-madagascar-240.png", 
+        "svg": "image/icons8-madagascar.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "mermaid",
+        "name": "Mermaid",
+        "png": "image/icons8-mermaid-240.png", 
+        "svg": "image/icons8-mermaid.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "naruto",
+        "name": "Naruto",
+        "png": "image/icons8-naruto-240.png", 
+        "svg": "image/icons8-naruto.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "popeye",
+        "name": "Popeye",
+        "png": "image/icons8-popeye-240.png", 
+        "svg": "image/icons8-popeye.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "sailor-moon",
+        "name": "Sailor Moon",
+        "png": "image/icons8-sailor-moon-240.png", 
+        "svg": "image/icons8-sailor-moon.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "smurf",
+        "name": "Smurf",
+        "png": "image/icons8-smurf-240.png", 
+        "svg": "image/icons8-smurf.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "sonic-the-hedgehog",
+        "name": "Sonic The Hedgehog",
+        "png": "image/icons8-sonic-the-hedgehog-240.png", 
+        "svg": "image/icons8-sonic-the-hedgehog.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "tanjiro-kamado",
+        "name": "Tanjiro Kamado",
+        "png": "image/icons8-tanjiro-kamado-240.png", 
+        "svg": "image/icons8-tanjiro-kamado.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "thanos",
+        "name": "Thanos",
+        "png": "image/icons8-thanos-240.png", 
+        "svg": "image/icons8-thanos.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "tom",
+        "name": "Tom",
+        "png": "image/icons8-tom-240.png", 
+        "svg": "image/icons8-tom.svg",
+        "active": false,
+        "selected": false
+    },
+    {
+        "id": "woody-woodpecker",
+        "name": "Woody Woodpecker",
+        "png": "image/icons8-woody-woodpecker-240.png", 
+        "svg": "image/icons8-woody-woodpecker.svg",
+        "active": false,
+        "selected": false
+    }
+]

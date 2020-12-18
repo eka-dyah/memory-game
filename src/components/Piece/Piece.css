@@ -1,0 +1,13 @@
+.Piece {
+    background-color: gainsboro;
+}
+
+.Piece.selected {
+    box-shadow: 0px 0px 4px 2px #d8961e;
+    background-color: blanchedalmond;
+}
+
+.Piece.active {
+    box-shadow: 0px 0px 4px 2px #0072ff;
+    background-color: #bbd4ff;
+}
