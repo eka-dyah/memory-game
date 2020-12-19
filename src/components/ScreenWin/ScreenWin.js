@@ -6,7 +6,7 @@ const ScreenWin = ({ win, seconds }) => {
 		<>
 			{win ? (
 				<div
-					className="position-absolute d-flex align-items-center justify-content-center"
+					className="position-absolute d-flex flex-column align-items-center justify-content-center"
 					style={{
 						top: 0,
 						bottom: -5,

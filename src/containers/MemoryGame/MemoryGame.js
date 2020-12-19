@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { Component } from "react";
 
 import Layout from "../../components/Layout";
 import { generateRandomLists } from "../../utils/generateRandomLists";
@@ -7,70 +7,84 @@ import { modifiedArray } from "../../utils/modifiedArray";
 import content from "../../data/data.json";
 import { checkWin } from "../../utils/checkWin";
 
-const MemoryGame = () => {
-	const [itemLists, setItemLists] = useState([]);
-	const [selected, setSelected] = useState(null);
-	const [checking, setChecking] = useState(false);
-	const [play, setPlay] = useState(false);
-	const [seconds, setSeconds] = useState(0);
-	const [win, setWin] = useState(false);
-	const [inv, setInv] = useState(null);
-	
-	const generateTile = useCallback(() => {
-		console.log(play)
-		const items = generateRandomLists(content, 10);
-		clearInterval(inv);
-		setInv(null);
-		setWin(false);
-		setItemLists(items);
-		setSeconds(0);
-	}, [inv]);
+class MemoryGame extends Component {
+	state = {
+		itemLists: [],
+		selected: null,
+		checking: false,
+		play: false,
+		seconds: 0,
+		win: false,
+	};
 
-	useEffect(() => {
-		generateTile();
-	}, [generateTile]);
+	componentDidMount() {
+		this.generateTile();
+	}
 
-	const playButton = () => {
-		if (win) {
-			generateTile();
+	generateTile = () => {
+		if (!this.state.play) {
+			const items = generateRandomLists(content, 48);
+			this.setState({
+				win: false,
+				itemLists: items,
+				seconds: 0,
+			});
 		}
-		setPlay(true);
-		setWin(false);
-		console.log("play");
-		let i = seconds;
-		if (win) i = 0;
-		setInv(setInterval(() => {
-			i++;
-			setSeconds(seconds + 1);
-		}, 1000))
 	};
 
-	const pauseButton = () => {
-		setPlay(false);
-		clearInterval(inv);
-		setInv(null);
+	resetButton = () => {
+		this.generateTile();
 	};
 
-	const clicked = (id, index) => {
+	playButton = () => {
+		if (this.state.win) {
+			this.generateTile();
+		}
+		this.setState({
+			play: true,
+			win: false,
+		});
+
+		this.interval = setInterval(() => {
+			this.setState((state) => ({ seconds: state.seconds + 1 }));
+		}, 1000);
+	};
+
+	pauseButton = () => {
+		this.setState({
+			play: false,
+		});
+
+		clearInterval(this.interval);
+		this.interval = null;
+	};
+
+	clicked = (id, index) => {
 		if (
 			id.active === false &&
 			id.selected === false &&
-			checking === false
+			this.state.checking === false
 		) {
-			const newLists = modifiedArray(itemLists, index, "selected", true);
-			setItemLists(newLists);
-			if (selected === null) {
-				setSelected([id, index]);
+			const newLists = modifiedArray(
+				this.state.itemLists,
+				index,
+				"selected",
+				true
+			);
+			this.setState({ itemLists: newLists });
+
+			if (this.state.selected === null) {
+				this.setState({ selected: [id, index] });
 			} else {
-				setChecking(true);
+				this.setState({ checking: true });
 				setTimeout(() => {
-					if (selected[0].id === id.id) {
+					if (this.state.selected[0].id === id.id) {
 						const newLists = modifiedArray(
-							itemLists,
+							this.state.itemLists,
 							index,
 							"active",
 							true,
-							selected[1],
+							this.state.selected[1],
 							"active",
 							true
 						);
@@ -79,51 +93,57 @@ const MemoryGame = () => {
 							index,
 							"selected",
 							false,
-							selected[1],
+							this.state.selected[1],
 							"selected",
 							false
 						);
-						setItemLists(newLists2);
-						setSelected(null);
-						setChecking(false);
+						this.setState({
+							itemLists: newLists2,
+							selected: null,
+							checking: false,
+						});
 						if (checkWin(newLists2)) {
-							setWin(true);
-							setPlay(false);
-							pauseButton();
+							this.setState({
+								win: true,
+								play: false,
+							});
+							this.pauseButton();
 						}
 					} else {
 						const newLists = modifiedArray(
-							itemLists,
+							this.state.itemLists,
 							index,
 							"selected",
 							false,
-							selected[1],
+							this.state.selected[1],
 							"selected",
 							false
 						);
-						setItemLists(newLists);
-						setSelected(null);
-						setChecking(false);
+						this.setState({
+							itemLists: newLists,
+							selected: null,
+							checking: false,
+						});
 					}
 				}, 500);
 			}
 		}
 	};
 
-	return (
-		<>
+	render() {
+		return (
 			<Layout
-				content={itemLists}
-				click={clicked}
-				seconds={seconds}
-				resetButton={generateTile}
-				playButton={playButton}
-				pauseButton={pauseButton}
-				play={play}
-				win={win}
+				content={this.state.itemLists}
+				click={this.clicked}
+				seconds={this.state.seconds}
+				resetButton={this.generateTile}
+				playButton={this.playButton}
+				pauseButton={this.pauseButton}
+				play={this.state.play}
+				win={this.state.win}
 			/>
-		</>
-	);
-};
+		);
+	}
+}
 
 export default MemoryGame;

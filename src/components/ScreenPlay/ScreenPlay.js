@@ -1,5 +1,4 @@
 const ScreenPlay = ({play, playButton}) => {
-	console.log(play);
 	return (
 		<>
 			{play ? null : (
@@ -21,7 +20,7 @@ const ScreenPlay = ({play, playButton}) => {
 						<i
 							className="fa fa-play-circle-o"
 							aria-hidden="true"
-							style={{ fontSize: "10em" }}
+							style={{ fontSize: "5em" }}
 						></i>
 					</button>
 				</div>

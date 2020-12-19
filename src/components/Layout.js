@@ -28,7 +28,7 @@ const Layout = ({
 					resetButton={resetButton}
 				/>
 			</div>
-			<div className="col-12 position-relative">
+			<div className="col-12 position-relative mt-3">
 				<ScreenPlay play={play} playButton={playButton} />
 				<ScreenWin win={win} seconds={seconds} />
 				<Board content={content} click={click} />

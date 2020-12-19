@@ -6,3 +6,27 @@
 .Timer p {
     margin: 0 15px;
 }
+
+.Timer .toasty {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    bottom: -65px;
+    opacity: 100%;
+}
+
+.Timer .toasty p {
+    padding: 5px 40px;
+    background-color: #f9edb6;
+    border-radius: 25px;
+    border: 4px solid #ad4545;
+    color: #2828c5;
+    font-weight: 600;
+}
+
+.Timer .toasty .upnone {
+    transform: translateY(13px);
+    opacity: 0%;
+    transition: transform 1.2s, opacity 1.2s;
+}
