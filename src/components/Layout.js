@@ -15,7 +15,7 @@ const Layout = ({
 	win
 }) => (
 	<div className="container-lg">
-		<div className="row">
+		<div className="d-flex flex-wrap">
 			<div className="col-12">
 				<Header title="Memory Game" />
 			</div>

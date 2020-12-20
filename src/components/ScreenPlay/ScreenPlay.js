@@ -7,8 +7,8 @@ const ScreenPlay = ({play, playButton}) => {
 					style={{
 						top: 0,
 						bottom: -5,
-						left: 0,
-						right: 0,
+						left: 15,
+						right: 15,
 						zIndex: 1,
 						backgroundColor: "rgb(230 230 230)",
 					}}

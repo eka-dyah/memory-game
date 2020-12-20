@@ -12,7 +12,7 @@ const Board = ({ content = [], click }) => {
 		/>
 	));
 	return (
-		<div className="row justify-content-center align-items-center">
+		<div className="d-flex flex-wrap justify-content-center align-items-center">
 			{renderContent}
 		</div>
 	);

@@ -1,13 +1,40 @@
 .Piece {
     background-color: gainsboro;
+    transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.Piece div {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #5f87a2;
+    transform: rotate3d(0, 1, 0, 0deg);
+    opacity: 0%;
+}
+
+.Piece div p {
+    color: azure;
+    font-size: 1.3em;
+    margin-top: 14px;
+}
+
+.Piece div.active {
+    transform: rotate3d(0, 1, 0, 180deg);
+    opacity: 100%;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .Piece.selected {
     box-shadow: 0px 0px 4px 2px #d8961e;
     background-color: blanchedalmond;
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition: transform 0.25s;
 }
 
 .Piece.active {
     box-shadow: 0px 0px 4px 2px #0072ff;
     background-color: #bbd4ff;
+    transform: rotate3d(0, 1, 0, 0deg);
 }
