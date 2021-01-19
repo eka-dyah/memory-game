@@ -1,3 +1,5 @@
+import TypeWriterEffect from "react-typewriter-effect";
+
 const ScreenWin = ({ win, seconds }) => {
 	const time = `${Math.floor(seconds / 60)}:${
 		seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60
@@ -16,7 +18,12 @@ const ScreenWin = ({ win, seconds }) => {
 						backgroundColor: "rgb(230 230 230)",
 					}}
 				>
-					<h2>YOU WIN</h2>
+					<TypeWriterEffect
+						startDelay={0}
+						cursorColor="black"
+						text="YOU WIN"
+						typeSpeed={150}
+					/>
 					<p>
 						Your time: <b>{time}</b>
 					</p>

@@ -13,7 +13,6 @@
     left: 0;
     right: 0;
     bottom: -65px;
-    opacity: 100%;
 }
 
 .Timer .toasty p {
@@ -25,7 +24,7 @@
     font-weight: 600;
 }
 
-.Timer .toasty .upnone {
+.Timer .toasty p.upnone {
     transform: translateY(13px);
     opacity: 0%;
     transition: transform 1.2s, opacity 1.2s;
